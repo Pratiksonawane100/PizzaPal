@@ -537,3 +537,43 @@ body {
 .btn-13:active {
   top: 2px;
 }
+
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-message {
+  position: fixed;
+  top: 15%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  max-width: 80%;
+  /* Adjust the maximum width */
+  background-color: #5cb85c;
+  /* Green background */
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  z-index: 9999;
+  /* Ensure it's above other elements */
+  animation: slideIn 0.5s forwards;
+  /* Apply the animation */
+}
+
+@media (max-width: 768px) {
+  .success-message {
+    font-size: 16px;
+    padding: 15px;
+  }
+}

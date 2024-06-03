@@ -173,6 +173,7 @@ export default reviews;
 function App() {
   const [filteredPizzas, setFilteredPizzas] = useState(Data);
   const [cartItems, setCartItems] = useState([]);
+
   const [loading, setLoading] = useState(true);
   const [users, setUsers] = useState(() => {
     const storedUsers = localStorage.getItem("users");
@@ -300,11 +301,25 @@ function App() {
 function Home({ pizzaData, onAddToCart }) {
   const [filteredPizzas, setFilteredPizzas] = useState(Data);
   const [cartItems, setCartItems] = useState([]);
+  const [showWelcomeMessage, setShowWelcomeMessage] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowWelcomeMessage(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
   const handleAddToCart = (pizza) => {
     setCartItems([...cartItems, pizza]);
   };
   return (
     <div className="home" style={{ backgroundcolor: "#22303C" }}>
+      {showWelcomeMessage && (
+        <div className="success-message">
+          <p style={{ color: "white" }}>Successful login!</p>
+        </div>
+      )}
       <Banner content="From Order To" imageUrl={banner} />
       <Status />
       <Homemenu pizzas={filteredPizzas} pizzaData={PizzaData} />

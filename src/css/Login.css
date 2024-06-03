@@ -188,3 +188,29 @@ body {
 .signup-link a:hover {
     text-decoration: none;
 }
+
+/* Add animation keyframes */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.error-message {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    background: #e50914;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    animation: slideIn 0.5s ease-out forwards;
+}
