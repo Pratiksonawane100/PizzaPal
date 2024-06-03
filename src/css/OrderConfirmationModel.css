@@ -1,0 +1,139 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Shadow effect */
+    max-width: 400px;
+    /* Adjust as per your design */
+    width: 100%;
+    text-align: center;
+}
+
+.receipt {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.receipt-total {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.order-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.order-button:hover {
+    background-color: #0056b3;
+    /* Darker shade of blue on hover */
+}
+
+.close-btn {
+    display: flex;
+
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 370px;
+}
+
+.h {
+    margin-bottom: 20px;
+}
+
+/* OrderConfirmationModel.css */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.h {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.receipt {
+    margin-bottom: 20px;
+}
+
+.receipt-item {
+    margin-bottom: 10px;
+}
+
+.receipt-total {
+    border-top: 2px solid #ccc;
+    padding-top: 10px;
+}
+
+.cash-on-delivery {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.notification {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}

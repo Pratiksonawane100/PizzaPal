@@ -1,0 +1,219 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Add space between elements */
+    align-items: center;
+    /* Vertically center items */
+    padding: 10px 160px;
+    /* Add padding */
+    background-color: #fff;
+    /* Background color for navbar */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* Ensure navbar stays on top */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add shadow for depth */
+}
+
+.navbar-left {
+    flex: 1;
+    /* Take up available space */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right a {
+    margin-right: 35px;
+    text-decoration: none;
+    color: black;
+}
+
+.cart-size {
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    /* Ensure it's a circle */
+    padding: 5px 8px;
+    /* Adjust padding as needed */
+}
+
+.company-logo {
+    height: 80px;
+    /* Adjust height as needed */
+    width: auto;
+    margin-right: 20px;
+    /* Adjust margin as needed */
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar-right a {
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .company-logo {
+        margin-right: 0;
+    }
+}
+
+.navbar {
+    position: relative;
+    /* Ensure proper positioning */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+
+}
+
+/* .navbar-left {
+    display: flex;
+    align-items: center;
+} */
+
+
+
+.navbar-right {
+    display: flex;
+    margin-right: -600px;
+}
+
+.navbar-right a {
+    margin-right: 45px;
+}
+
+.menu-btn {
+    display: none;
+    /* Initially hidden */
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.menu-btn__burger {
+    width: 30px;
+    height: 6px;
+    background-color: black;
+    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn__burger1 img {
+    width: 80%;
+    position: relative;
+    /* left: 220px; */
+    margin-left: 15px;
+}
+
+
+.menu-btn__burger.open {
+    transform: rotate(45deg);
+    transition: 0.4s;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-right.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    /* Adjust based on your navbar height */
+    right: 0;
+    background-color: #fff;
+    /* Adjust background color as needed */
+    padding: 1rem;
+    z-index: 999;
+    width: 90%;
+    margin: auto;
+    height: 42rem;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.navbar-right.open a {
+    margin-top: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-right.open a :active {
+    background-color: #a55e5e;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .navbar-right {
+        display: none;
+        /* Initially hidden on smaller screens */
+    }
+
+    .navbar {
+        width: 100%;
+    }
+}
+
+.navbar-right Link.active {
+    background-color: green;
+}
+
+
+.navbar-right a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    /* Set position to relative for pseudo-element positioning */
+}
+
+.navbar-right a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    /* Initially set width to 0 */
+    height: 2px;
+    /* Set the height of the underline */
+    background-color: #333;
+    /* Color of the underline */
+    transition: width 0.3s ease;
+    /* Add transition for width */
+}
+
+.navbar-right a:hover::before {
+    width: 100%;
+    /* Expand the underline on hover */
+}

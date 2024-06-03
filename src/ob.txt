@@ -1,0 +1,264 @@
+const pizzas = [
+  {
+    name: "Margherita",
+    image: "margherita.jpg",
+    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Basil"],
+    price: 9.99
+  },
+  {
+    name: "Pepperoni",
+    image: "pepperoni.jpg",
+    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Pepperoni"],
+    price: 11.99
+  },
+  {
+    name: "Vegetarian",
+    image: "vegetarian.jpg",
+    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Mushrooms", "Bell Peppers", "Onions", "Olives"],
+    price: 10.99
+  },
+  {
+    
+    name: "Hawaiian",
+    image: "hawaiian.jpg",
+    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Ham", "Pineapple"],
+    price: 12.99
+  },
+  {
+    name: "Supreme",
+    image: "supreme.jpg",
+    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Pepperoni", "Sausage", "Mushrooms", "Bell Peppers", "Onions", "Olives"],
+    price: 13.99
+  },
+  {
+    
+    name: "BBQ Chicken",
+    image: "bbq_chicken.jpg",
+    ingredients: ["BBQ Sauce", "Mozzarella Cheese", "Grilled Chicken", "Red Onions", "Cilantro"],
+    price: 12.49
+  },
+  {
+    
+    name: "Meat Lovers",
+    image: "meat_lovers.jpg",
+    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Pepperoni", "Sausage", "Ham", "Bacon"],
+    price: 14.49
+  },
+  {
+    
+    name: "Buffalo Chicken",
+    image: "buffalo_chicken.jpg",
+    ingredients: ["Buffalo Sauce", "Mozzarella Cheese", "Grilled Chicken", "Red Onions", "Ranch Drizzle"],
+    price: 12.99
+  },
+  {
+    
+    name: "Four Cheese",
+    image: "four_cheese.jpg",
+    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Parmesan Cheese", "Ricotta Cheese", "Gorgonzola"],
+    price: 11.99
+  },
+  {
+    name: "Veggie Delight",
+    image: "veggie_delight.jpg",
+    ingredients: ["Tomato Sauce", "Mozzarella Cheese", "Mushrooms", "Bell Peppers", "Onions", "Olives", "Tomatoes"],
+    price: 11.49
+  }
+];
+
+
+<Pizza
+          name="Margherita"
+          ingredients="Tomato Sauce, Mozzarella Cheese, Basil"
+          image={img1}
+          price="10"
+        />
+        <Pizza
+          name="Pepperoni"
+          image={img2}
+          ingredients="Tomato Sauce, Mozzarella Cheese,Pepperoni"
+          price="11.99"
+        />
+        <Pizza
+          name="Pepperoni"
+          image={img3}
+          ingredients="Tomato Sauce, Mozzarella Cheese,Pepperoni"
+          price="11.99"
+        />
+        <Pizza
+          name="Pepperoni"
+          image={img4}
+          ingredients="Tomato Sauce, Mozzarella Cheese,Pepperoni"
+          price="11.99"
+        />
+
+
+
+
+function Footer() {
+  const hour = new Date().getHours();
+  const openhour = 9;
+  const closehour = 10;
+  const ispoen = hour >= closehour;
+  // const ispoen = hour >= openhour && hour <= closehour;
+  console.log(ispoen);
+  return (
+    <footer>
+      {ispoen ? (
+        <div>
+          <p style={{ color: "black" }}>
+            We're Open Until {closehour}:00 Pm. Come Visit Us or Order Online
+          </p>
+        </div>
+      ) : (
+        <p>
+          We're Happy To Welcome You Between {openhour}:00 AM and {closehour}:00
+          PM.
+        </p>
+      )}
+    </footer>
+  );
+}
+
+import React, { useState } from "react";
+import Pizza from "./Pizza";
+import "./Menu.css";
+
+function Menu({ pizzas, onAddToCart }) {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filterCriteria, setFilterCriteria] = useState("all"); // State for filter criteria
+  const [cartItems, setCartItems] = useState([]); // Initialize cartItems as an empty array
+
+  const handleSearchChange = (event) => {
+    const query = event.target.value.toLowerCase();
+    setSearchQuery(query);
+  };
+
+  const handleFilterChange = (event) => {
+    const criteria = event.target.value;
+    setFilterCriteria(criteria);
+  };
+
+  const handleLike = (pizza, isLiked) => {
+    // Implement your logic for handling like/dislike here
+    console.log("Pizza liked:", pizza.name);
+  };
+
+  const filteredPizzas = pizzas.filter((pizza) => {
+    // Filter based on search query
+    const matchName = pizza.name.toLowerCase().includes(searchQuery);
+    // Filter based on filter criteria
+    if (filterCriteria === "all") {
+      return matchName;
+    } else if (filterCriteria === "veg") {
+      return matchName && pizza.vegetarian;
+    } else if (filterCriteria === "nonveg") {
+      return matchName && !pizza.vegetarian;
+    }
+  });
+
+  return (
+    <main className="menu-container">
+      <h2 className="menu-heading">Our Menu</h2>
+      <div className="filter-container">
+        <input
+          type="text"
+          placeholder="Search pizzas"
+          value={searchQuery}
+          onChange={handleSearchChange}
+        />
+        <select value={filterCriteria} onChange={handleFilterChange}>
+          <option value="all">All</option>
+          <option value="veg">Vegetarian</option>
+          <option value="nonveg">Non-Vegetarian</option>
+        </select>
+      </div>
+      <div className="menu-list">
+        {filteredPizzas.map((pizza, index) => (
+          <Pizza
+            key={index}
+            pizzaObj={pizza}
+            onAddToCart={onAddToCart}
+            onLike={handleLike} // Pass onLike function to Pizza component
+            cartItems={cartItems}
+          />
+        ))}
+      </div>
+    </main>
+  );
+}
+
+export default Menu;
+
+
+1. **Crust**: 
+   - Thin crust
+   - Thick crust
+   - Stuffed crust
+   - Gluten-free crust
+
+2. **Sauce**:
+   - Marinara sauce
+   - Alfredo sauce
+   - Pesto sauce
+   - BBQ sauce
+   - Olive oil and garlic base
+
+3. **Cheese**:
+   - Mozzarella
+   - Cheddar
+   - Parmesan
+   - Feta
+   - Gorgonzola
+   - Vegan cheese options
+
+4. **Meat Toppings**:
+   - Pepperoni
+   - Italian sausage
+   - Bacon
+   - Ham
+   - Chicken
+   - Beef
+   - Meatballs
+
+5. **Vegetable Toppings**:
+   - Mushrooms
+   - Onions
+   - Bell peppers (red, green, yellow)
+   - Olives (black or green)
+   - Spinach
+   - Tomatoes
+   - Jalapeños
+   - Artichokes
+   - Pineapple
+   - Arugula
+   - Sun-dried tomatoes
+
+6. **Additional Toppings**:
+   - Fresh basil
+   - Oregano
+   - Garlic
+   - Red pepper flakes
+   - Pine nuts
+   - Avocado
+   - Caramelized onions
+   - Eggplant
+   - Fresh herbs
+
+7. **Specialty Ingredients**:
+   - Anchovies
+   - Prosciutto
+   - Truffle oil
+   - Shrimp
+   - Duck confit
+   - Fig jam
+   - Goat cheese
+   - Roasted red peppers
+   - Capers
+
+8. **Customization Options**:
+   - Half-and-half toppings
+   - Extra cheese
+   - Extra sauce
+   - Light sauce
+   - Well-done or lightly cooked

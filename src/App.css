@@ -1,38 +1,539 @@
-.App {
+/* Reset styles */
+body, h1, h2, h3, p, ul, li, button, input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  margin-top: 20px;
+}
+
+/* Global styles */
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.sidebar-right {
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header h1 {
+  font-size: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Sidebar styles */
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: #555;
+}
+
+/* Account Summary styles */
+.account-summary {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.account-summary h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Transfer Form styles */
+.transfer-form {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.transfer-form input,
+.transfer-form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.transfer-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.transfer-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Transaction List styles */
+.transaction-list {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.transaction-list h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.transaction-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaction-list li {
+  margin-bottom: 10px;
+}
+
+/* Account Details styles */
+.account-details {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.account-details h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.account-details p {
+  margin-bottom: 10px;
+}
+
+/* image */
+.PizzaImage {
+  width: 200px;
+  /* Adjust this value to your desired width */
+  height: auto;
+  /* Keeps aspect ratio */
+}
+
+/* styles.css */
+.Container {
+  width: 150px;
+  /* Adjust width as needed */
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.PizzaImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.flex1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* For larger screens, adjust the number of cards shown in a row */
+@media (min-width: 768px) {
+  .flex1 {
+    justify-content: space-around;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Add gap between content in cards */
+.Container>* {
+  margin-bottom: 10px;
+}
+
+/* Style for the price button */
+.PriceButton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.PriceButton:hover {
+  background-color: #45a049;
+}
+
+
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f8f8;
+} */
+
+.MenuContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Container {
+  width: 280px;
+
+  /* Adjust width as needed */
+  padding: 20px;
+  margin: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.PizzaImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.flex1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* For larger screens, adjust the number of cards shown in a row */
+@media (min-width: 768px) {
+  .flex1 {
+    justify-content: space-around;
+  }
+
+  .menuontainer {
+    width: 80%;
+  }
+
+}
+
+
+
+
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+p {
+  font-family: Arial, sans-serif;
+  color: #666;
+}
+
+main {
+  text-align: center;
+}
+
+flex1 {
+  display: flex;
+}
+
+.company-title {
+  text-align: center;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  margin-bottom: 5px;
+  color: white;
+  margin: 30px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 20px;
+  /* Adjust padding as needed */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: 30%;
+  /* Adjust width as needed */
+  margin-bottom: 20px;
+}
+
+
+.footer-column h3 {
+  margin-bottom: 10px;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .footer-column {
+    width: 100%;
+  }
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+
+
+/* App.css */
+
+/* Banner styles */
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  /* Set a fixed height */
+  color: white;
+  /* Text color */
+  text-align: center;
+  /* Center text */
+  border-radius: 20px;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  /* Semi-transparent grey overlay */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 20px;
+  left: 0px;
+  width: 50px;
+}
+
+.banner-content h2 {
+  margin: 0;
+  color: white;
+  position: relative;
+  left: 0px;
+  /* Set text color to white */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  /* Center-align the content */
+  align-items: center;
+  height: 60px;
+  /* Adjust height as needed */
+  /* Example background color */
+  color: rgb(81, 80, 80);
+  /* Example text color */
+  padding: 0 20px;
+  /* Example padding */
+}
+
+.company-title {
+  font-size: 1.5em;
+  /* Example font size */
+  font-weight: bold;
+  /* Example font weight */
+  margin-right: auto;
+  /* Push company name to left corner */
+}
+
+.company-title:hover {
+  color: lightblue;
+  /* Example hover color */
+}
+
+.navbar-right a {
+  margin-left: 20px;
+  /* Example margin between links */
+  text-decoration: none;
+  /* Remove underline from links */
+  color: rgb(87, 87, 87);
+  /* Example text color */
+  transition: color 0.3s;
+  /* Smooth transition on color change */
+}
+
+.navbar-right a:hover {
+  color: lightblue;
+  /* Example hover color */
+}
+
+.banner-content p {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+.banner-content button {
+  background-color: green;
+  /* Set the background color of the button to green */
+  color: white;
+  /* Set the text color of the button to white */
+  border: none;
+  /* Remove the border */
+  padding: 10px 20px;
+  /* Add some padding to the button */
+  font-size: 18px;
+  /* Set the font size of the button */
+  cursor: pointer;
+  border-radius: 10px;
+  /* Change cursor to pointer on hover */
+}
+
+.banner-content button:hover {
+  opacity: 0.8;
+  /* Reduce opacity on hover for a visual effect */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* background-color: #f0f0f0; */
+  color: #333;
+  /* background-color: #293642; */
+  background-color: #B9D9EB;
+  /* background-color: #15202B; */
+}
+
+/* Place content center */
+.feedback {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  padding: 20px;
+  height: 300px;
+  /* Add padding as needed */
 }
 
-.App-link {
-  color: #61dafb;
+.review1 {
+  margin: 120px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 768px) {
+  .review1 {
+    margin: 0px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.btn-13 {
+  background-color: #89d8d3;
+  background-image: linear-gradient(315deg, #0ff1e2 0%, #03c8a8 74%);
+  border: none;
+  z-index: 1;
+}
+
+.btn-13:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #4dccc6;
+  background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  /* box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001; */
+  transition: all 0.3s ease;
+}
+
+.btn-13:hover {
+  color: black;
+}
+
+.btn-13:hover:after {
+  top: 0;
+  height: 100%;
+}
+
+.btn-13:active {
+  top: 2px;
 }

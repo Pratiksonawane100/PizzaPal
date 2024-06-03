@@ -1,0 +1,106 @@
+.orders {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.orders h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.order {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.order h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.order-details {
+    margin-top: 10px;
+}
+
+.pizza-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.pizza-item:last-child {
+    border-bottom: none;
+}
+
+.pizza-item p {
+    margin: 0;
+    flex: 1;
+    color: #666;
+}
+
+.pizza-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pizza-item:hover {
+    background-color: #f9f9f9;
+}
+
+.pizza-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-total {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cancel-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+    background-color: #ff0000;
+}
+
+/* Orders.css */
+.view-status-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.view-status-button:hover {
+    background-color: #1bda24;
+}

@@ -1,0 +1,25 @@
+/* CSS for centering the image */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Set container height to viewport height */
+}
+
+.image {
+    width: 200px;
+    /* Set fixed width */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+
+    /* Adjust image size for smaller screens */
+    .image {
+        width: 30%;
+        /* 80% of the viewport width */
+    }
+}

@@ -1,0 +1,113 @@
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    top: 15px;
+    left: 35px;
+}
+
+.menu-heading::before,
+.menu-heading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: #000;
+}
+
+.menu-heading::before {
+    right: calc(100% + 10px);
+}
+
+.menu-heading::after {
+    left: calc(100% + 10px);
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin-left: 10px;
+}
+
+.filter-container label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-list .Container {
+    width: calc(25% - 10px);
+}
+
+.menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+    margin-top: 20px;
+}
+
+.menu-list .Container img {
+    width: 100%;
+    height: auto;
+    /* Ensures the image resizes responsively */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .menu-list {
+        justify-content: flex-start;
+    }
+
+    .menu-list>* {
+        flex: 0 0 calc(100% - 20px);
+    }
+
+    .menu-container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+    }
+}

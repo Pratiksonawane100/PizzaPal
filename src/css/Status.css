@@ -1,0 +1,75 @@
+.status-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.status {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to next line on smaller screens */
+    gap: 10px;
+}
+
+.status-item {
+    position: relative;
+    width: 90px;
+    /* Adjust size of images */
+    height: 90px;
+    /* Adjust size of images */
+    border-radius: 50%;
+    /* Circular shape */
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a shadow */
+    border: 3px solid #4CAF50;
+    /* Green border */
+}
+
+.status-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loading {
+    position: absolute;
+    top: -2px;
+    /* Adjust position to center the loading animation */
+    left: -2px;
+    /* Adjust position to center the loading animation */
+    width: calc(100% + 4px);
+    /* Adjust size to cover the original border */
+    height: calc(100% + 4px);
+    /* Adjust size to cover the original border */
+    border: 2px solid transparent;
+    border-top-color: #4CAF50;
+    /* Green border for rotating segment */
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+    /* Animation for rotation */
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .status-item {
+        margin-top: 30px;
+        width: 60px;
+        /* Adjust size of images for smaller screens */
+        height: 60px;
+        /* Adjust size of images for smaller screens */
+    }
+}
+
+body.banner-open {
+    overflow: hidden;
+    /* Prevent scrolling on the body when banner is open */
+}

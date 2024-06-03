@@ -1,0 +1,359 @@
+.cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart {
+    width: 80%;
+    /* Adjust width as needed */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.cart-item img {
+    width: 100px;
+    /* Fixed width for the image */
+    margin-right: 20px;
+}
+
+.cart-item .item-details {
+    flex-grow: 1;
+    /* Allows item details to expand to fill available space */
+}
+
+.cart-item .item-details p {
+    margin: 5px 0;
+}
+
+.cart-item .remove-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.total-price {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-price p {
+    font-weight: bold;
+}
+
+.order-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    background-color: #0056b3;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.quantity-button:hover {
+    background-color: #218838;
+}
+
+.quantity-count {
+    margin: 0 10px;
+    /* Add margin to create space between the quantity count and buttons */
+}
+
+.remove-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.empty-cart-message {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    /* Adjust margin as needed */
+}
+
+/* Cart.css */
+
+
+
+
+
+.cart {
+    max-width: 100%;
+    /* Adjust as needed */
+    padding: 20px;
+}
+
+.cart h2 {
+    margin-top: 0;
+    /* Remove default margin */
+}
+
+.cart-p {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.cart-p img {
+    width: 200px;
+    /* Adjust the size as needed */
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    border-radius: 50%;
+    /* Remove the white background */
+}
+
+.empty-cart-message {
+    text-align: center;
+    font-size: 18px;
+}
+
+.select-container {
+    display: inline-block;
+    /* Display inline */
+    margin-right: 10px;
+    /* Adjust spacing between select elements */
+}
+
+.select-container select {
+    font-family: Arial, sans-serif;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 150px;
+    /* Adjust width as needed */
+}
+
+/* Adjust appearance when option is selected */
+.select-container select:focus {
+    outline: none;
+    border-color: #007bff;
+    /* Blue color */
+}
+
+/* Style for options */
+.select-container select option {
+    font-family: Arial, sans-serif;
+    padding: 8px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Style for dropdown arrow */
+.select-container select::-ms-expand {
+    display: none;
+}
+
+.select-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Hover effect */
+.select-container select:hover {
+    background-color: #f0f0f0;
+}
+
+/* Default styles */
+.cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart {
+    width: 100%;
+    max-width: 1100px;
+    /* Added maximum width */
+    padding: 20px;
+    margin: 0 auto;
+    /* Center the cart on large screens */
+}
+
+/* Added responsiveness */
+@media only screen and (max-width: 768px) {
+    .cart {
+        width: 100%;
+        /* Adjust width for smaller screens */
+    }
+
+    .cartd {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 8px;
+    }
+
+    .select-container {
+        display: block;
+        /* Change display to block for smaller screens */
+        margin-right: 0;
+        /* Remove margin right */
+        margin-bottom: 10px;
+        /* Add margin bottom */
+    }
+
+    .select-container select {
+        width: 100%;
+        /* Make select elements full width on smaller screens */
+    }
+
+    .remove {
+        display: flex;
+        margin: 5px;
+    }
+
+    .quantity {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .remove-button {
+        margin: 5px;
+    }
+}
+
+/* Styles for select elements */
+.select-container select {
+    font-family: Arial, sans-serif;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 150px;
+    margin-left: 10px;
+    /* Adjust width as needed */
+}
+
+/* Adjust appearance when option is selected */
+.select-container select:focus {
+    outline: none;
+    border-color: #28a745;
+    /* Blue color */
+}
+
+/* Style for options */
+.select-container select option {
+    font-family: Arial, sans-serif;
+    padding: 8px;
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* Style for dropdown arrow */
+.select-container select::-ms-expand {
+    display: none;
+}
+
+.select-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Hover effect */
+.select-container select:hover {
+    background-color: #f0f0f0;
+}
+
+.select-container select option:hover {
+    background-color: #28a745;
+    /* Green color */
+    color: white;
+    /* Text color */
+}
+
+.notification {
+    margin-top: 75px;
+}
+
+.cartd {
+    margin-top: 30px;
+}
+
+.notification {
+    background-color: green;
+    /* Default background color */
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.notification.error {
+    background-color: #dc3545;
+    /* Red background color for error notification */
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .cartd {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* For screens smaller than 576px */
+@media screen and (max-width: 576px) {
+    .cart-item {
+        padding: 10px;
+    }
+
+    .item-details h3 {
+        font-size: 16px;
+    }
+
+    .quantity-button {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+
+    .quantity-count {
+        font-size: 14px;
+    }
+
+    .remove-button {
+        padding: 3px 8px;
+    }
+
+    .order-button {
+        padding: 8px 16px;
+    }
+}

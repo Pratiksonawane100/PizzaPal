@@ -1,0 +1,131 @@
+/* StatusPage.css */
+
+.status-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.order-details {
+    margin-bottom: 20px;
+}
+
+.timeline {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    border-left: 2px solid #ccc;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 10px 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    z-index: 1;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 28px;
+    width: 2px;
+    height: calc(100% - 28px);
+    background-color: #ccc;
+}
+
+.timeline-item.active .timeline-marker {
+    background-color: #4caf50;
+    border-color: #4caf50;
+}
+
+.timeline-content {
+    padding-left: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: calc(var(--animation-order) * 0.5s);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+/* .status-page {
+    background-color: #222;
+    color: #fff;
+} */
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.timeline-content {
+    border-left: 2px solid #fff;
+    padding-left: 10px;
+}
+
+/* Add light line separator */
+.order-details>div:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+/* StatusPage.css */
+.back-button {
+    background-color: #ff6347;
+    /* Adjust color as needed */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #ff4500;
+    /* Adjust hover color as needed */
+}
